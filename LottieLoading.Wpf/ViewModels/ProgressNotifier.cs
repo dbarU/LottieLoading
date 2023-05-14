@@ -1,4 +1,6 @@
-﻿namespace LottieLoading.Wpf.ViewModels;
+﻿using System.Windows;
+
+namespace LottieLoading.Wpf.ViewModels;
 
 public class ProgressNotifier : ObservableObject
 {
@@ -8,10 +10,6 @@ public class ProgressNotifier : ObservableObject
     public double Progress
     {
         get => _progress;
-        set
-        {
-            _progress = value;
-            OnPropertyChanged(nameof(Progress));
-        }
+        set => SetField(ref _progress, value);
     }
 }

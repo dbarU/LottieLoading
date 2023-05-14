@@ -1,12 +1,27 @@
-﻿<UserControl x:Class="LottieLoading.Wpf.Dialogs.ModalDialog"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:LottieLoading.Wpf.Dialogs"
-             mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-        
-    </Grid>
-</UserControl>
+﻿<Window
+    x:Class="LottieLoading.Wpf.Dialogs.ModalDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:md="https://github.com/fantasticfiasco/mvvm-dialogs"
+    xmlns:transforms="clr-namespace:LottieSharp.WPF.Transforms;assembly=LottieSharp"
+    xmlns:wpf="clr-namespace:LottieSharp.WPF;assembly=LottieSharp"
+    md:DialogServiceViews.IsRegistered="True"
+    AllowsTransparency="True"
+    Background="Transparent"
+    ResizeMode="NoResize"
+    SizeToContent="WidthAndHeight"
+    WindowStartupLocation="CenterOwner"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <wpf:LottieAnimationView
+        x:Name="lottieView"
+        Width="100"
+        Height="200"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        AutoPlay="True"
+        FileName="{Binding FilePath}"
+        RepeatCount="3" />
+</Window>

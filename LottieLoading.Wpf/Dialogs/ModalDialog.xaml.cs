@@ -1,11 +1,19 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.IO;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace LottieLoading.Wpf.Dialogs;
 
-public partial class ModalDialog : UserControl
+public partial class ModalDialog : Window
 {
+
     public ModalDialog()
     {
+      
         InitializeComponent();
+       
     }
+
+    
 }
